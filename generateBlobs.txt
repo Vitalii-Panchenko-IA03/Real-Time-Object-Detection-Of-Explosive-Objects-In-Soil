@@ -1,0 +1,50 @@
+% Параметри
+time_sec = 5;             % Час у секундах
+distance_m = 0.5;         % Дистанція у метрах
+time_samples = 500;       % Кількість зразків по часу
+distance_samples = 700;   % Кількість зразків по дистанції
+
+% Створюємо градієнтні дані
+depth_gradient = linspace(0.05, 0.1, distance_samples);  
+data = repmat(depth_gradient, time_samples, 1);
+
+% Додаємо шум
+noise = randn(time_samples, distance_samples);
+data = data + noise;
+
+max_intensity = max(data(:));
+
+% Об'єкти в ґрунті
+num_blobs = randi([1, 8]); 
+for i = 1:num_blobs
+    center_x = randi([100, 400]);
+    center_y = randi([50, 650]);
+    sigma_x = randi([15, 100]); 
+    sigma_y = randi([10, 160]); 
+    intensity = randi([0, round(max_intensity)]); 
+    [X, Y] = meshgrid(1:distance_samples, 1:time_samples);
+    gaussian_blob = 5 * exp(-((X - center_y).^2 / (2 * sigma_x^2) + (Y - center_x).^2 / (2 * sigma_y^2)));
+    data = data + gaussian_blob + intensity;
+end
+
+for i = 1:5
+    start_x = randi([10, distance_samples - 100]);
+    start_y = randi([10, 400]);
+    length = randi([100, 200]); 
+    intensity = randi([1, 3]); 
+    for j = 0:length
+        if start_x + j < distance_samples
+            data(start_y, start_x + j) = data(start_y, start_x + j) + intensity;
+        end
+    end
+end
+
+% Побудова графіка
+figure;
+imagesc([0 distance_m], [0 time_sec], data);
+colormap('jet');
+colorbar('Ticks', [-0.5 -0.4 -0.3 -0.2 -0.1 0.0], 'TickLabels', {'-0.5', '-0.4', '-0.3', '-0.2', '-0.1', '-0'});
+xlabel('Distance (m)');
+ylabel('Time (sec)');
+title('Synthetic GPR Data');
+set(gca, 'YDir', 'reverse');
