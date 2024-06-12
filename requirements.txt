@@ -1,0 +1,19 @@
+#ML
+torch==2.0.1
+keras==2.13.1
+tensorflow==2.13.0
+ultralytics==8.0.171
+
+# Core
+opencv-contrib-python==4.8.0.76
+pandas==2.0.3
+pyqt5==5.15.9
+numpy==1.23
+Image==1.5.33
+pyfiglet==0.8.post1
+mss==9.0.1
+pillow==10.0.0
+
+# Format and testing
+black==23.7.0
+pytest==7.4.0

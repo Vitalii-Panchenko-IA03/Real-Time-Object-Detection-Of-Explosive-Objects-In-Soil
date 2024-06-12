@@ -1,0 +1,84 @@
+2024-06-12 13:15:09,530 - root - INFO -     ____             ____  _                   _____                         
+   / __ \___  ____ _/ / /_(_)___ ___  ___     / ___/_____________  ___  ____ 
+  / /_/ / _ \/ __ `/ / __/ / __ `__ \/ _ \    \__ \/ ___/ ___/ _ \/ _ \/ __ \
+ / _, _/  __/ /_/ / / /_/ / / / / / /  __/   ___/ / /__/ /  /  __/  __/ / / /
+/_/ |_|\___/\__,_/_/\__/_/_/ /_/ /_/\___/   /____/\___/_/   \___/\___/_/ /_/ 
+                                                                             
+         __                                        _ __  __       ___    _ 
+   _____/ /_________  ____ _____ ___     _      __(_) /_/ /_     /   |  (_)
+  / ___/ __/ ___/ _ \/ __ `/ __ `__ \   | | /| / / / __/ __ \   / /| | / / 
+ (__  ) /_/ /  /  __/ /_/ / / / / / /   | |/ |/ / / /_/ / / /  / ___ |/ /  
+/____/\__/_/   \___/\__,_/_/ /_/ /_/    |__/|__/_/\__/_/ /_/  /_/  |_/_/   
+                                                                           
+       __     __            __  _           
+  ____/ /__  / /____  _____/ /_(_)___  ____ 
+ / __  / _ \/ __/ _ \/ ___/ __/ / __ \/ __ \
+/ /_/ /  __/ /_/  __/ /__/ /_/ / /_/ / / / /
+\__,_/\___/\__/\___/\___/\__/_/\____/_/ /_/ 
+                                            
+   ____                  __           
+  / __ \_   _____  _____/ /___ ___  __
+ / / / / | / / _ \/ ___/ / __ `/ / / /
+/ /_/ /| |/ /  __/ /  / / /_/ / /_/ / 
+\____/ |___/\___/_/  /_/\__,_/\__, /  
+                             /____/   
+
+2024-06-12 13:15:09,530 - root - INFO - This program starts several threads that stream pc screen andrun object detection on it and show detections with PyQt5 overlay.
+2024-06-12 13:15:09,530 - root - INFO - Starting Program...
+2024-06-12 13:15:09,530 - root - INFO - All threads started, will take a few seconds to load model
+2024-06-12 13:15:09,530 - root - INFO - 
+2024-06-12 13:15:09,530 - root - INFO - ----- Settings -----
+2024-06-12 13:15:09,530 - root - INFO - Max box size : 100000000
+2024-06-12 13:15:09,530 - root - INFO - Detection precision treshhold : 30.0%
+2024-06-12 13:15:09,530 - root - INFO - Max amount of detection : 100
+2024-06-12 13:15:09,530 - root - INFO - Max amount of tracking misses : 5
+2024-06-12 13:15:09,530 - root - INFO - Do detections every : 1 second
+2024-06-12 13:15:09,530 - root - INFO - Rescale image detection size : 640
+2024-06-12 13:15:09,530 - root - INFO - Classifications : ['FMCW-Radar-Output'] * if empty all detections are allowed.
+2024-06-12 13:15:09,530 - root - INFO - Screen size : 1920x1080
+2024-06-12 13:15:09,530 - root - INFO - Screen offset : (0, 0)
+2024-06-12 13:15:09,530 - root - INFO - Average amount of red : 240
+2024-06-12 13:15:09,530 - root - INFO - 
+2024-06-12 13:15:09,530 - root - INFO - 
+2024-06-12 13:15:09,530 - root - INFO - ----- Usage -----
+2024-06-12 13:15:09,530 - root - INFO - Exit by typing : 'ctrl+c'
+2024-06-12 13:15:09,530 - root - INFO - 
+2024-06-12 13:15:09,539 - root - INFO - MSS started with monitor : {'top': 0, 'left': 0, 'width': 1920, 'height': 1080}
+2024-06-12 13:15:09,566 - root - INFO - Multithreading with maximum 24 threads
+2024-06-12 13:15:09,567 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:10,568 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:12,438 - root - DEBUG - got detection now create trackerbox: [(0.8170003294944763, 'FMCW-Radar-Output', (0.5930131673812866, 0.524991512298584, 0.11578256636857986, 0.3676367998123169))]
+2024-06-12 13:15:12,698 - root - DEBUG - New Box Created at 608 218  Size 131 235
+2024-06-12 13:15:13,438 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:14,592 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:15,763 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:16,933 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:18,125 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:18,244 - root - DEBUG - got detection now create trackerbox: [(0.6940188407897949, 'FMCW-Radar-Output', (0.857666015625, 0.46818655729293823, 0.07144511491060257, 0.16248242557048798)), (0.3876381516456604, 'FMCW-Radar-Output', (0.7711507678031921, 0.4538639187812805, 0.1497328132390976, 0.18258127570152283))]
+2024-06-12 13:15:18,252 - root - DEBUG - New Box Created at 935 247  Size 81 103
+2024-06-12 13:15:18,255 - root - DEBUG - New Box Created at 792 232  Size 170 116
+2024-06-12 13:15:19,246 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:20,537 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:20,657 - root - DEBUG - got detection now create trackerbox: [(0.7254846096038818, 'FMCW-Radar-Output', (0.592598557472229, 0.5842288732528687, 0.05667916685342789, 0.0840398296713829))]
+2024-06-12 13:15:20,662 - root - DEBUG - New Box Created at 642 347  Size 64 53
+2024-06-12 13:15:21,658 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:22,819 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:23,945 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:24,082 - root - DEBUG - got detection now create trackerbox: [(0.7479052543640137, 'FMCW-Radar-Output', (0.48357370495796204, 0.8224412202835083, 0.11902255564928055, 0.10736622661352158))]
+2024-06-12 13:15:24,086 - root - DEBUG - New Box Created at 482 492  Size 135 68
+2024-06-12 13:15:25,082 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:25,190 - root - DEBUG - got detection now create trackerbox: [(0.7479052543640137, 'FMCW-Radar-Output', (0.48357370495796204, 0.8224412202835083, 0.11902255564928055, 0.10736622661352158))]
+2024-06-12 13:15:25,197 - root - DEBUG - New Box Created at 482 492  Size 135 68
+2024-06-12 13:15:26,191 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:26,329 - root - DEBUG - got detection now create trackerbox: [(0.7806603908538818, 'FMCW-Radar-Output', (0.4820442795753479, 0.8102976083755493, 0.12294657528400421, 0.13280268013477325))]
+2024-06-12 13:15:26,333 - root - DEBUG - New Box Created at 478 476  Size 139 84
+2024-06-12 13:15:27,330 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:28,610 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:29,839 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:30,050 - root - DEBUG - got detection now create trackerbox: [(0.5234404802322388, 'FMCW-Radar-Output', (0.45244303345680237, 0.6840256452560425, 0.1581277847290039, 0.16799893975257874))]
+2024-06-12 13:15:30,058 - root - DEBUG - New Box Created at 424 384  Size 179 107
+2024-06-12 13:15:31,061 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:32,312 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:33,581 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:34,777 - root - DEBUG - Trigger Detection...
+2024-06-12 13:15:35,961 - root - DEBUG - Trigger Detection...
