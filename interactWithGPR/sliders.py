@@ -3,7 +3,6 @@ Used to show GUI for GPR interaction
 """
 
 from tkinter import Scale, Button, VERTICAL, Tk, Menu, messagebox, Label, TclError
-from PIL import ImageTk
 from struct import pack
 
 import serial
@@ -31,17 +30,7 @@ window = Tk()
 window.geometry('1100x400+200+100')  # Size of the window(x,y) + position on screen (x,y)
 window.minsize(width=1000, height=300)
 window.title('GPR Control Panel')
-# try:
-#     window.iconbitmap("gpr_icon.ico")  # Icon of the window
-#
-# except TclError:
-#     print('No ico file found')
 
-# Load the logo image:
-# logo = ImageTk.PhotoImage(file="GPR_logo.gif")
-
-# Add presentation text:
-# WelcomeImm = Label(window, image=logo).pack(side="right", expand=1)  # Place the logo image
 explanation = "GUI to interact with GPR"
 WelcomeText = Label(window,
                     font=("Baskerville Old Face", "10", "bold"), foreground='blue',
